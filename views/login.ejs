@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="overlaylogin">
+            <div class="centerdivlogin">
+                <div class="leftloginpart">
+                    <div class="text09">
+                        <img id="loginlogo" src="./images/logo.png" alt="">
+                        <h2>Welcome Back!</h2>
+                    </div>
+                    <img src="./images/loginpage.png" alt="">
+                </div>
+                <div class="rightloginpart">
+                    <div class="text08">
+                        <h2>login</h2>
+                        <p>login to your account !</p>
+                        <form action="/loginUser" method="POST" autocomplete="off" >
+                            <input name="username" type="text" placeholder="Your Name">
+                            <input name="password" type="password" autocomplete="new-password" placeholder="Password">
+                            <a href="#">forgot password ?</a>
+                            <input id="submitbutton" type="submit" value="Login">
+                        </form>
+                        <p id="loginbutton" >Don't have an account ? <span><a href="/register">Sign up</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

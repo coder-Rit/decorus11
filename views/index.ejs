@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="main">
+      <div class="home">
+       <div class="overlay4">
+        <div class="navbar2">
+          <div class="links">
+              <a class="active" href="/">Home</a>
+              <a href="/about">About us</a>
+              <a href="/services">services</a>
+              <a href="/gallery" >gallery</a>
+              <a id="contact2" href="/contact" >Contact</a>
+          </div>
+          <!-- <div class="button">
+              <button class="button1" > <a href="https://www.google.com/">login</a> </button>
+              <button class="button2" ><a href="https://www.google.com/">sign up</a></button>
+          </div> -->
+  
+          <i class="ri-close-circle-line"></i>
+          
+      </div>
+       </div>
+        <div class="navbar">
+          <div class="leftnav">
+           <a href="/"> <img src="./images/logo.png" alt=""> </a>
+          </div>
+          <div class="centernav">
+            <div class="links">
+              <a class="active" href="/">home</a>
+              <a href="/about">about us</a>
+              <a href="/services">services</a>
+              <a href="/gallery">gallery</a>
+              <a href="/contact">contact</a>
+            </div>
+          </div>
+          <% if (loggedInUser === null) { %>
+            <div class="rightnav"> 
+              <button class="btn1" id="btn1"><a href="/login">Login</a></button>
+              <i class="ri-menu-line"></i>
+            </div>
+          <% } else { %>
+            <div class="rightnav"> 
+              <p><%= loggedInUser.username %></p>
+              <button class="btn1" id="btn1"><a href="/logout">Logout</a></button>
+              <i class="ri-menu-line"></i>
+            </div>
+          <% } %>
+          
+        </div>
+        <div class="herosection">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1607861884586-c7cfaed16290?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <div class="overlay">
+                  <div class="text">
+                    <h1>Welcome to Decorus Events</h1>
+                    <p>We are a premier event management company specializing in corporate conferences and luxury weddings. Our team of experts is dedicated to delivering exceptional events that reflect elegance and professionalism. Let us bring your vision to life.</p>
+                    <button class="btn1" id="btn2"> <a href="/contact">Book Appointment</a> </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <div class="overlay2">
+                  <div class="text2">
+                    <h1>Creating Memorable <br> Events</h1>
+                    <p>Elegance. Professionalism. Perfection.</p>
+                    <button class="btn1" id="btn2"> <a href="/contact">Book Appointment</a> </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1520242739010-44e95bde329e?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <div id="overlay3" class="overlay">
+                  <div class="text">
+                    <h1>Welcome to Decorus Events</h1>
+                    <p>We are a premier event management company specializing in corporate conferences and luxury weddings. Our team of experts is dedicated to delivering exceptional events that reflect elegance and professionalism. Let us bring your vision to life.</p>
+                    <button class="btn1" id="btn2"> <a href="/contact">Book Appointment</a> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="popup" id="popup">
+          Thank you for submitting the form!
+      </div>
+      
+      
+      </div>
+      <div class="secondsection">
+        <div class="whyussection">
+        <img id="leftimg" src="./images/leftflower.png" alt="">
+        <img id="rightimg" src="./images/rightflower2.png" alt="">
+
+        <div class="leftsec">
+          <div class="text3">
+            <h2>Why Choose Us ?</h2>
+            <p>We are your partners in crafting 
+              exceptional events that leave a 
+              lasting impression.</p>
+          </div>
+        </div>
+        <div class="rightsec">
+          <div id="mobilepoint" class="toppoints">
+             <div class="firstpoint">
+              <div class="circle">
+                <i>🌈</i>
+              </div>
+              <p>Innovative Ideas</p>
+             </div>
+             <div class="firstpoint">
+              <div class="circle">
+                <i>🌿</i>
+              </div>
+              <p>Stress-Free Planning</p>
+             </div>
+             
+          </div>
+          <div class="toppoints">
+             <div class="firstpoint">
+              <div class="circle">
+                <i>📆</i>
+              </div>
+              <!-- <p>Memorable Experiences</p> -->
+              <p>Flawless Execution</p>
+             </div>
+             <div class="firstpoint">
+              <div class="circle">
+                <i>✨</i>
+              </div>
+              <p>Memorable Experiences</p>
+              <!-- <p>Flawless Execution</p> -->
+             </div>
+             
+          </div>
+        </div>
+
+        </div>
+        
+      </div>
+      <div class="aboutussection">
+        <div class="aboutus">
+          <div class="aboutleftsec">
+            <img src="https://images.unsplash.com/photo-1604668915840-580c30026e5f?auto=format&fit=crop&q=80&w=1948&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          </div>
+          <div class="aboutrightsec">
+            <div class="text4">
+              <h4>About us</h4>
+              <h2>Crafting Unforgettable Moments, Every Time</h2>
+              <p>Decorus Events is a premier event management company dedicated to creating extraordinary experiences. With a focus on corporate conferences and luxury weddings, we combine meticulous planning, innovative design, and impeccable execution to deliver events that exceed expectations. </p>
+              <button id="btn3" class="btn1"> <a href="/about">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="servicessection">
+        <div class="services">
+          <div class="topbar">
+            <h2>Our services</h2>
+            <button id="btn3" class="btn1"> <a href="/services"> See All </a> </button>
+          </div>
+          <div class="allservices">
+            <!-- <div class="singleservice">
+              <div class="topservicepart"></div>
+              <div class="btmservicepart"></div>
+            </div> -->
+            <div class="swiper mySwiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="singleservice">
+                    <div class="topservicepart">
+                      <div class="overlay2"></div>
+                      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                    <div class="btmservicepart">
+                      <h2 id="servicenumber" > 01 </h2>
+                      <h2 id="servicename" >luxury weddings</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="singleservice">
+                    <div class="topservicepart">
+                      <div class="overlay2"></div>
+                      <img src="https://images.unsplash.com/photo-1501527459-2d5409f8cf9f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                    <div class="btmservicepart">
+                      <h2 id="servicenumber" > 02 </h2>
+                      <h2 id="servicename" >Music Concerts</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="singleservice">
+                    <div class="topservicepart">
+                      <div class="overlay2"></div>
+                      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2FsYSUyMGRpbm5lcnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                    </div>
+                    <div class="btmservicepart">
+                      <h2 id="servicenumber" > 03 </h2>
+                      <h2 id="servicename" > Gala Dinner</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="singleservice">
+                    <div class="topservicepart">
+                      <div class="overlay2"></div>
+                      <img src="./images/luxuryevents.jpeg" alt="">
+                    </div>
+                    <div class="btmservicepart">
+                      <h2 id="servicenumber" > 04 </h2>
+                      <h2 id="servicename" >luxury Events</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="singleservice">
+                    <div class="topservicepart">
+                      <div class="overlay2"></div>
+                      <img src="./images/luxurystalls.jpeg" alt="">
+                    </div>
+                    <div class="btmservicepart">
+                      <h2 id="servicenumber" > 05 </h2>
+                      <h2 id="servicename" >luxury stalls</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="singleservice">
+                    <div class="topservicepart">
+                      <div class="overlay2"></div>
+                      <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                    <div class="btmservicepart">
+                      <h2 id="servicenumber" > 06 </h2>
+                      <h2 id="servicename" >Corporate Events</h2>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="workssection">
+        <div class="works">
+          <div class="text5">
+            <h2>our works</h2>
+            <p>we ensure that every event is executed flawlessly, leaving a lasting impression on guests.</p>
+          </div>
+          <div class="wrapper3">
+            <div class="wrap-slider">
+              <div class="wrap-track">
+                <div class="imageslide1">
+                  <img src="https://plus.unsplash.com/premium_photo-1661456402497-e637f6a21896?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2VkZGluZyUyMCUyQyUyMHBhcnR5fGVufDB8fDB8fHww" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://plus.unsplash.com/premium_photo-1681841695231-d674aa32f65b?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2VkZGluZyUyMCUyQyUyMHBhcnR5fGVufDB8fDB8fHww" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://images.unsplash.com/photo-1504993945773-3f38e1b6a626?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://plus.unsplash.com/premium_photo-1681841703443-53de247ce32b?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper3">
+            <div class="wrap-slider">
+              <div id="wrap2" class="wrap-track">
+                <div class="imageslide1">
+                  <img src="https://plus.unsplash.com/premium_photo-1661456402497-e637f6a21896?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2VkZGluZyUyMCUyQyUyMHBhcnR5fGVufDB8fDB8fHww" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://plus.unsplash.com/premium_photo-1681841695231-d674aa32f65b?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2VkZGluZyUyMCUyQyUyMHBhcnR5fGVufDB8fDB8fHww" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://images.unsplash.com/photo-1504993945773-3f38e1b6a626?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://plus.unsplash.com/premium_photo-1681841703443-53de247ce32b?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+                <div class="imageslide1">
+                  <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdlZGRpbmclMjAlMkMlMjBwYXJ0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviewssection">
+        <div class="reviews">
+          <div class="leftreviewpart">
+            <div class="text6">
+              <h2>What our customer say <br>
+                about us .</h2>
+              <p>our greatest satisfaction comes from seeing our clients' dreams come true. We take immense pride in the events we create, and the kind words from our valued clients inspire us to continue exceeding expectations.</p>
+            </div>
+          </div>
+          <div class="rightreviewpart">
+            <div class="swiper mySwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="text7">
+                    <div class="profileimage">
+                      <img src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D" alt="">
+                    </div>
+                    <h2>Mary Jane</h2>
+                    <div class="ratings">
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, nam laborum saepe illum placeat sint.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide colorchange ">
+                  <div class="text7">
+                    <div class="profileimage">
+                      <img src="https://images.unsplash.com/photo-1517530094915-500495b15ade?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8" alt="">
+                    </div>
+                    <h2>John Doe</h2>
+                    <div class="ratings">
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, nam laborum saepe illum placeat sint.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text7">
+                    <div class="profileimage">
+                      <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D" alt="">
+                    </div>
+                    <h2>Nanacy Michal</h2>
+                    <div class="ratings">
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, nam laborum saepe illum placeat sint.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide colorchange">
+                  <div class="text7">
+                    <div class="profileimage">
+                      <img src="https://images.unsplash.com/photo-1511551203524-9a24350a5771?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8" alt="">
+                    </div>
+                    <h2>Donald david</h2>
+                    <div class="ratings">
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, nam laborum saepe illum placeat sint.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text7">
+                    <div class="profileimage">
+                      <img src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8" alt="">
+                    </div>
+                    <h2>Tom Holland</h2>
+                    <div class="ratings">
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, nam laborum saepe illum placeat sint.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide colorchange">
+                  <div class="text7">
+                    <div class="profileimage">
+                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D" alt="">
+                    </div>
+                    <h2>Georgia Meloni</h2>
+                    <div class="ratings">
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, nam laborum saepe illum placeat sint.</p>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="brandssection">
+        <h2>Top brands</h2>
+        <div class="brands">
+          <img class="brand1" src="./images/starbucks.png" alt="">
+          <img class="brand2" src="./images/loreal.png" alt="">
+          <img class="brand3" src="./images/sephora.png" alt="">
+          <img class="brand1" src="./images/starbucks.png" alt="">
+          <img class="brand2" src="./images/loreal.png" alt="">
+          <img class="brand3" src="./images/sephora.png" alt="">
+        </div>
+      </div>
+      <div class="contactsection">
+        <h2>Contact us to make your <br>
+          event <span>Memorable</span> </h2>
+        <div class="contact">
+          <img id="designcirc" src="./images/designcirc.png" alt="">
+          <img id="designcirc2" src="./images/designcirc2.png" alt="">
+          <div class="contactform">
+            <form action="/submit-form?submitted=1" method="POST" >
+              <div class="topfields">
+                <input name="username" type="text" placeholder="Name">
+                <input name="email" type="email" placeholder="Email">
+              </div>
+              <div class="topfields">
+                <input name="number" type="number" placeholder="Mobile Number">
+                <!-- <input name="date" type="date" placeholder="Event Date"> -->
+                <!-- <input name="eventname" type="text" placeholder="Event Name"> -->
+                <select id="select" name="eventname" >
+                  <option value="" disabled selected hidden>Select an Event</option>
+                  <option value="Luxury Weddings">Luxury Weddings</option>
+                  <option value="Music Concerts">Music Concerts</option>
+                  <option value="Gala Dinner">Gala Dinner</option>
+                  <option value="Luxury Events">Luxury Events</option>
+                  <option value="Luxury Stalls">Luxury Stalls</option>
+                  <option value="Corporate Events">Corporate Events</option>
+                </select>
+              </div>
+              <textarea name="message" id="msg" cols="30" rows="10" placeholder="Write your message here.....">
+              </textarea>
+              <button class="btn1">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footersection">
+        <div class="footer">
+          <div class="leftpartfooter">
+            <a href="/"> <img src="./images/logo.png" alt=""> </a>
+          </div>
+          <div class="centerpartfooter">
+            <div class="links">
+              <a class="active" href="/">home</a>
+              <a href="/about">about us</a>
+              <a href="/services">services</a>
+              <a href="/gallery">gallery</a>
+              <a href="/contact">contact</a>
+            </div>
+          </div>
+          <div class="rightpartfooter">
+            <div class="socials">
+              <div class="social"><a target="_blank" href="https://www.instagram.com/decorus.events/?utm_source=qr"><i class="ri-instagram-line"></i></a></div>
+              <div class="social"><a target="_blank" href="https://www.facebook.com/profile.php?id=61552267478912&mibextid=LQQJ4d"><i class="ri-facebook-fill"></i></a></i></div>
+              <div class="social"><i class="ri-twitter-line"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+   <script>
+    var isMobile = window.matchMedia("(max-width: 767px)").matches;
+    var swiper = new Swiper(".mySwiper1", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      autoplay: isMobile ? { delay: 2500, disableOnInteraction: false } : false,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper2", {
+      effect: "cards",
+      grabCursor: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+ 
+ <!-- <script>
+  // Function to show the popup
+  function showPopup() {
+      const popupContainer = document.querySelector('.popup-container');
+      popupContainer.style.display = 'flex';
+  }
+
+  // Function to close the popup
+  function closePopup() {
+      const popupContainer = document.querySelector('.popup-container');
+      popupContainer.style.display = 'none';
+  }
+
+  window.onload = function () {
+      // Check for the presence of a cookie indicating the popup has been shown
+      if (document.cookie.indexOf('popupShown=true') === -1) {
+          // Get the query parameters from the URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const emailSent = urlParams.get('emailSent');
+
+          if (emailSent === 'true') {
+              // Show the popup
+              showPopup();
+
+              // Set a cookie to remember that the popup has been shown
+              document.cookie = 'popupShown=true; path=/; max-age=86400'; // Expires in 24 hours
+          }
+
+          // Attach a click event to the close button
+          const closeButton = document.querySelector('.close-button');
+          closeButton.addEventListener('click', closePopup);
+      }
+  }
+</script> -->
+
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const submittedParam = urlParams.get("submitted");
+    const popup = document.getElementById("popup");
+
+    if (submittedParam === "1") {
+        // Show the popup
+        popup.style.display = "flex";
+
+        // Automatically fade away the popup after 3 seconds (3000 milliseconds)
+        setTimeout(function () {
+            popup.style.opacity = "0";
+        }, 3000);
+    }
+});
+
+</script>
+
+<script>
+   document.querySelector(".rightnav i").addEventListener("click" , function(){  
+    document.querySelector(".overlay4").style.display = "flex"
+            document.querySelector(".overlay4").style.left = 0;
+        //    document.querySelector(".main").style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+            // document.querySelector(".navbar2").style.overflow = "hidden";            
+    })
+    document.querySelector(".navbar2 i").addEventListener("click" , function(){
+        document.querySelector(".overlay4").style.left = -100 + "%";
+        document.querySelector(".overlay4").style.display = "none"
+
+    })
+</script>
+
+
+
+</body>
+</html>

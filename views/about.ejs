@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main2">
+        <div class="home2">
+          <div class="overlay4">
+            <div class="navbar2">
+              <div class="links">
+                  <a href="/">Home</a>
+                  <a class="active" href="/about">About us</a>
+                  <a href="/services">services</a>
+                  <a href="/gallery" >gallery</a>
+                  <a id="contact2" href="/contact" >Contact</a>
+              </div>
+              <!-- <div class="button">
+                  <button class="button1" > <a href="https://www.google.com/">login</a> </button>
+                  <button class="button2" ><a href="https://www.google.com/">sign up</a></button>
+              </div> -->
+      
+              <i class="ri-close-circle-line"></i>
+              
+          </div>
+           </div>
+            <div class="navbar">
+                <div class="leftnav">
+                  <a href="/"> <img src="./images/logo.png" alt=""> </a>
+                </div>
+                <div class="centernav">
+                  <div class="links">
+                    <a href="/">home</a>
+                    <a class="active" href="/about">about us</a>
+                    <a href="/services">services</a>
+                    <a href="/gallery">gallery</a>
+                    <a href="/contact">contact</a>
+                  </div>
+                </div>
+                <% if (loggedInUser === null) { %>
+                  <div class="rightnav"> 
+                    <button class="btn1" id="btn1"><a href="/login">Login</a></button>
+                    <i class="ri-menu-line"></i>
+                  </div>
+                <% } else { %>
+                  <div class="rightnav"> 
+                    <p><%= loggedInUser.username %></p>
+                    <button class="btn1" id="btn1"><a href="/logout">Logout</a></button>
+                    <i class="ri-menu-line"></i>
+                  </div>
+                <% } %>
+            </div>
+            <div class="aboutherosection">
+                <h2>About Us</h2>
+            </div>
+            <div class="paraheadline">
+                <p>Decorus Events is a premier event management company dedicated to creating extraordinary experiences. With a focus on corporate conferences and luxury weddings, we combine meticulous planning, innovative design, and impeccable execution to deliver events that exceed expectations. Our team of experienced professionals is passionate about bringing your vision to life and ensuring every detail is perfect.</p>
+            </div>
+        </div>
+        <div class="aboutsection2">
+            <h2>Crafting <span>Unforgettable</span> Moments, Every Time</h2>
+            <div class="abouttwoimages">
+                <div class="aboutimage1">
+                    <img src="./images/aboutimage1.jpeg" alt="">
+                </div>
+                <div class="aboutimage2">
+                    <img src="./images/aboutimage2.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="ourapproachsection">
+            <div class="ourapproach">
+                <h2>Our Approach <span><img src="./images/aboutarrow.png" alt=""></span></h2>
+                <div class="secondparaabout">
+                    <p>At Decorus Events, we believe in the power of creativity and attention to detail. Our team of experienced professionals is dedicated to crafting unique and memorable events that exceed our clients' expectations. From concept development to flawless execution, we are committed to delivering excellence in every aspect of event management.</p>
+                </div>
+            </div>
+            <div class="aboutthreeimages">
+                <img id="backgroundcircle" src="./images/backgroundcircle.png" alt="">
+                <div class="imagesdecor">
+                    <img src="./images/imagedecor1.jpeg" alt="">
+                    <img id="aboutpageimg2" src="./images/imagedecor2.jpeg" alt="">
+                    <img id="aboutpageimg3" src="./images/imagedecor3.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="aboutfabrication">
+            <h2>"<span>Cost-Efficient Excellence</span>: Our In- <br> House Fabrication House Delivers <br> More for Less!"</h2>
+            <div id="aboutus2" class="aboutus">
+                <div class="aboutleftsec">
+                  <img src="https://images.unsplash.com/photo-1625038032515-308ab14d10b9?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </div>
+                <div class="aboutrightsec">
+                  <div class="text4">
+                    <h4>About Fabrication House</h4>
+                    <!-- <h2>Crafting Unforgettable Moments, Every Time</h2> -->
+                    <p>At Decorus Events we take pride in our ability to offer high-quality event planning and design services at competitive prices. One of the key advantages that sets us apart is our in-house fabrication house. This means we can bring your vision to life with precision and attention to detail while keeping costs in check. By cutting out the middleman, we ensure that your budget goes further, without compromising on the quality of your event. Discover the value of working with Decorus Events today!</p>
+                    <!-- <button class="btn1"> Read More </button> -->
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="contactsection">
+          <h2>Contact us to make your <br>
+            event <span>Memorable</span> </h2>
+          <div class="contact">
+            <img id="designcirc" src="./images/designcirc.png" alt="">
+            <img id="designcirc2" src="./images/designcirc2.png" alt="">
+            <div class="contactform">
+              <form action="/submit-form" method="POST" >
+                <div class="topfields">
+                  <input name="username" type="text" placeholder="Name">
+                  <input name="email" type="email" placeholder="Email">
+                </div>
+                <div class="topfields">
+                  <input name="number" type="number" placeholder="Mobile Number">
+                  <!-- <input name="date" type="date" placeholder="Event Date"> -->
+                  <!-- <input name="eventname" type="text" placeholder="Event Name"> -->
+                  <select id="select" name="eventname" >
+                    <option value="" disabled selected hidden>Select an Event</option>
+                    <option value="Luxury Weddings">Luxury Weddings</option>
+                    <option value="Music Concerts">Music Concerts</option>
+                    <option value="Gala Dinner">Gala Dinner</option>
+                    <option value="Luxury Events">Luxury Events</option>
+                    <option value="Luxury Stalls">Luxury Stalls</option>
+                    <option value="Corporate Events">Corporate Events</option>
+                  </select>
+                </div>
+                <textarea name="message" id="msg" cols="30" rows="10" placeholder="Write your message here.....">
+                </textarea>
+                <button class="btn1">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footersection">
+          <div class="footer">
+            <div class="leftpartfooter">
+              <a href="/"> <img src="./images/logo.png" alt=""> </a>
+            </div>
+            <div class="centerpartfooter">
+              <div class="links">
+                <a class="active" href="/">home</a>
+                <a href="/about">about us</a>
+                <a href="/services">services</a>
+                <a href="/gallery">gallery</a>
+                <a href="/contact">contact</a>
+              </div>
+            </div>
+            <div class="rightpartfooter">
+              <div class="socials">
+                <div class="social"><a target="_blank" href="https://www.instagram.com/decorus.events/?utm_source=qr"><i class="ri-instagram-line"></i></a></div>
+                <div class="social"><a target="_blank" href="https://www.facebook.com/profile.php?id=61552267478912&mibextid=LQQJ4d"><i class="ri-facebook-fill"></i></a></i></div>
+                <div class="social"><i class="ri-twitter-line"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+    <script>
+      document.querySelector(".rightnav i").addEventListener("click" , function(){  
+       document.querySelector(".overlay4").style.display = "flex"
+               document.querySelector(".overlay4").style.left = 0;
+           //    document.querySelector(".main").style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+               // document.querySelector(".navbar2").style.overflow = "hidden";            
+       })
+       document.querySelector(".navbar2 i").addEventListener("click" , function(){
+           document.querySelector(".overlay4").style.left = -100 + "%";
+           document.querySelector(".overlay4").style.display = "none"
+   
+       })
+   </script>
+
+</body>
+</html>

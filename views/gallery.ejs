@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main2">
+        <div class="home2">
+          <div class="overlay4">
+            <div class="navbar2">
+              <div class="links">
+                  <a href="/">Home</a>
+                  <a href="/about">About us</a>
+                  <a href="/services">services</a>
+                  <a class="active"  href="/gallery" >gallery</a>
+                  <a id="contact2" href="/contact" >Contact</a>
+              </div>
+              <!-- <div class="button">
+                  <button class="button1" > <a href="https://www.google.com/">login</a> </button>
+                  <button class="button2" ><a href="https://www.google.com/">sign up</a></button>
+              </div> -->
+      
+              <i class="ri-close-circle-line"></i>
+              
+          </div>
+           </div>
+            <div class="navbar">
+                <div class="leftnav">
+                  <a href="/"> <img src="./images/logo.png" alt=""> </a>
+                </div>
+                <div class="centernav">
+                  <div class="links">
+                    <a href="/">home</a>
+                    <a  href="/about">about us</a>
+                    <a  href="/services">services</a>
+                    <a class="active" href="/gallery">gallery</a>
+                    <a href="/contact">contact</a>
+                  </div>
+                </div>
+                <% if (loggedInUser === null) { %>
+                  <div class="rightnav"> 
+                    <button class="btn1" id="btn1"><a href="/login">Login</a></button>
+                    <i class="ri-menu-line"></i>
+                  </div>
+                <% } else { %>
+                  <div class="rightnav"> 
+                    <p><%= loggedInUser.username %></p>
+                    <button class="btn1" id="btn1"><a href="/logout">Logout</a></button>
+                    <i class="ri-menu-line"></i>
+                  </div>
+                <% } %>
+            </div>
+            <div id="galleryabout" class="aboutherosection">
+                <h2>gallery</h2>
+            </div>
+            <!-- <div class="paraheadline">
+                <p>Decorus Events is a premier event management company dedicated to creating extraordinary experiences. With a focus on corporate conferences and luxury weddings, we combine meticulous planning, innovative design, and impeccable execution to deliver events that exceed expectations. Our team of experienced professionals is passionate about bringing your vision to life and ensuring every detail is perfect.</p>
+            </div> -->
+        </div>
+        <div class="gallerypage">
+          <div class="galleryrow1">
+            <div class="galleryleftrowpart">
+              <img src="https://plus.unsplash.com/premium_photo-1688125414656-ab91164cbd1e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVjb3JhdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+            </div>
+            <div class="galleryrightrowpart">
+              <div class="galleryrow1top">
+                <img src="https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVjb3JhdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+              </div>
+              <div class="galleryrow1btm">
+                <img src="https://plus.unsplash.com/premium_photo-1661778773089-8718bcedb39e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              </div>
+            </div>
+            <div class="gallerycenterrowpart">
+              <!-- <div class="centertoppart"> -->
+                <img src="https://images.unsplash.com/photo-1620207370579-ae2276efbdbe?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              <!-- </div> -->
+              <!-- <div class="centerbtmpart">
+                <div class="centerbtmtoppart">
+                  <img src="https://images.unsplash.com/photo-1561394818-699dc5ac3e9e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+                </div>
+                <div class="centerbtmtoppart">
+                  <img src="https://images.unsplash.com/photo-1528255671579-01b9e182ed1d?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="galleryrow2">
+            <div class="row2leftpart">
+              <img src="https://images.unsplash.com/photo-1550155921-59b42a868c17?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+            </div>
+            <div class="row2rightpart">
+              <div class="row2righttop">
+                <img src="https://plus.unsplash.com/premium_photo-1681426512771-ae386bf25e52?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              </div>
+              <div class="row2righttop">
+                <img src="https://plus.unsplash.com/premium_photo-1681488240099-f1f8585ef3e5?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzd8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="galleryrow3">
+            <div class="row3leftpart">
+              <div class="row3righttop">
+                <img src="https://plus.unsplash.com/premium_photo-1681426512771-ae386bf25e52?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              </div>
+              <div class="row3righttop">
+                <img src="https://plus.unsplash.com/premium_photo-1681488240099-f1f8585ef3e5?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzd8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              </div>
+            </div>
+            <div class="row3rightpart">
+              <img src="https://images.unsplash.com/photo-1550155921-59b42a868c17?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+            </div>
+          </div>
+          <div class="galleryrow1">
+            <div class="galleryleftrowpart">
+              <img src="https://plus.unsplash.com/premium_photo-1688125414656-ab91164cbd1e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVjb3JhdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+            </div>
+            <div class="galleryrightrowpart">
+              <div class="galleryrow1top">
+                <img src="https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVjb3JhdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+              </div>
+              <div class="galleryrow1btm">
+                <img src="https://plus.unsplash.com/premium_photo-1661778773089-8718bcedb39e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              </div>
+            </div>
+            <div class="gallerycenterrowpart">
+              <!-- <div class="centertoppart"> -->
+                <img src="https://images.unsplash.com/photo-1620207370579-ae2276efbdbe?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+              <!-- </div> -->
+              <!-- <div class="centerbtmpart">
+                <div class="centerbtmtoppart">
+                  <img src="https://images.unsplash.com/photo-1561394818-699dc5ac3e9e?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+                </div>
+                <div class="centerbtmtoppart">
+                  <img src="https://images.unsplash.com/photo-1528255671579-01b9e182ed1d?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGRlY29yYXRpb258ZW58MHx8MHx8fDA%3D" alt="">
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="footersection">
+          <div class="footer">
+            <div class="leftpartfooter">
+              <a href="/"> <img src="./images/logo.png" alt=""> </a>
+            </div>
+            <div class="centerpartfooter">
+              <div class="links">
+                <a class="active" href="/">home</a>
+                <a href="/about">about us</a>
+                <a href="/services">services</a>
+                <a href="/gallery">gallery</a>
+                <a href="/contact">contact</a>
+              </div>
+            </div>
+            <div class="rightpartfooter">
+              <div class="socials">
+                <div class="social"><a target="_blank" href="https://www.instagram.com/decorus.events/?utm_source=qr"><i class="ri-instagram-line"></i></a></div>
+                <div class="social"><a target="_blank" href="https://www.facebook.com/profile.php?id=61552267478912&mibextid=LQQJ4d"><i class="ri-facebook-fill"></i></a></i></div>
+                <div class="social"><i class="ri-twitter-line"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+      document.querySelector(".rightnav i").addEventListener("click" , function(){  
+       document.querySelector(".overlay4").style.display = "flex"
+               document.querySelector(".overlay4").style.left = 0;
+           //    document.querySelector(".main").style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+               // document.querySelector(".navbar2").style.overflow = "hidden";            
+       })
+       document.querySelector(".navbar2 i").addEventListener("click" , function(){
+           document.querySelector(".overlay4").style.left = -100 + "%";
+           document.querySelector(".overlay4").style.display = "none"
+   
+       })
+   </script>
+
+</body>
+</html>
