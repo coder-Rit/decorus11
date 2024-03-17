@@ -210,7 +210,7 @@ html,body{
   width: 100%;
 }
 
-.overlay{
+.overlay1{
   height: 89.1vh; 
   width: 100%;
   background-color: rgba(0, 0, 0, 0.500);
@@ -2011,7 +2011,7 @@ select {
     height: 80vh;
   } */
 
-  .overlay{
+  .overlay1{
     display: flex;
     flex-direction: column;
     align-items: center;
