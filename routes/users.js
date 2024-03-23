@@ -18,7 +18,7 @@ db.on('error', (err) => {
 
 db.on('open', () => {
   console.log('Connected to MongoDB successfully!');
-});
+}); 
 
 
 const userSchema = mongoose.Schema({
