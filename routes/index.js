@@ -73,7 +73,7 @@ router.get('/', function(req, res, next) {
       .then(function(loggedInUser) {
         if (loggedInUser) {
           // Render the index page with user-specific content
-          res.render('index', { loggedInUser });
+          res.render('about', { loggedInUser });
         } else {
           console.error('User not found in the database.');
           res.status(500).send('Internal Server Error');
@@ -192,6 +192,10 @@ router.get("/login" , function(req,res){
 
 router.get("/register" , function(req,res){
   res.render('register')
+})
+
+router.get("/blog" , function(req,res){
+  res.render('blog')
 })
 
 router.post("/registerUser" , function(req,res){
