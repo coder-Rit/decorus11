@@ -8,35 +8,7 @@ let flag_getWorkInfo = false;
 let flag_getReviewsInfo = false;
 let flag_getBrandInfo = false;
 
-async function getImageUrl() {
-  try {
-    const response = await fetch(
-      "https://decours-dashboard-server.onrender.com/api/v1/getLogo"
-    ); // Replace with your API endpoint
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    if (!data.data) {
-      console.log("no api data");
-      return;
-    }
-    flag_getImage = true;
-     if (!data.data) {
-      console.log("no api data");
-      return;
-    }
 
-    document.getElementById("logoimage").src = data.data[0].logoUrl;
-    //   const imageUrl = data.url; // Assuming the API response has a 'url' field with the image URL
-    //   return imageUrl;
-  } catch (error) {
-    console.error("Error fetching image URL:", error);
-    return null;
-  }
-}
-
-getImageUrl();
 
 async function getCrousalInfo() {
   try {
