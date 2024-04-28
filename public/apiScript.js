@@ -13,7 +13,7 @@ let flag_getBrandInfo = false;
 async function getCrousalInfo() {
   try {
     const response = await fetch(
-      "https://decours-dashboard-server.onrender.com/api/v1/getCarousel"
+      "https://decours-dashboard-server-sf8t.onrender.com/api/v1/getCarousel"
     ); // Replace with your API endpoint
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -45,7 +45,7 @@ getCrousalInfo();
 async function getAboutInfo() {
   try {
     const response = await fetch(
-      "https://decours-dashboard-server.onrender.com/api/v1/getAboutSection"
+      "https://decours-dashboard-server-sf8t.onrender.com/api/v1/getAboutSection"
     ); // Replace with your API endpoint
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -71,7 +71,7 @@ getAboutInfo();
 async function getServiceInfo() {
   try {
     const response = await fetch(
-      "https://decours-dashboard-server.onrender.com/api/v1/getOurService"
+      "https://decours-dashboard-server-sf8t.onrender.com/api/v1/getOurService"
     ); // Replace with your API endpoint
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -101,7 +101,7 @@ getServiceInfo();
 async function getWorkInfo() {
   try {
     const response = await fetch(
-      "https://decours-dashboard-server.onrender.com/api/v1/getOurWork"
+      "https://decours-dashboard-server-sf8t.onrender.com/api/v1/getOurWork"
     ); // Replace with your API endpoint
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -145,7 +145,7 @@ getWorkInfo();
 async function getReviewsInfo() {
   try {
     const response = await fetch(
-      "https://decours-dashboard-server.onrender.com/api/v1/getReviews"
+      "https://decours-dashboard-server-sf8t.onrender.com/api/v1/getReviews"
     ); // Replace with your API endpoint
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -183,7 +183,7 @@ getReviewsInfo();
 async function getBrandInfo() {
   try {
     const response = await fetch(
-      "https://decours-dashboard-server.onrender.com/api/v1/getBrands"
+      "https://decours-dashboard-server-sf8t.onrender.com/api/v1/getBrands"
     ); // Replace with your API endpoint
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
