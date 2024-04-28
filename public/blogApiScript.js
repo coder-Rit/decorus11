@@ -1,4 +1,4 @@
-const API_URI = "https://blog-dashbord.onrender.com";
+const API_URI = "https://blog-dashbord-0777.onrender.com";
 
 function renderFirst10Words(str, stock) {
   // Split the string into an array of words
@@ -226,7 +226,7 @@ async function getRecommoned() {
   async function getImageUrl() {
     try {
       const response = await fetch(
-        "https://decours-dashboard-server.onrender.com/api/v1/getLogo"
+        "https://decours-dashboard-server-sf8t.onrender.com/api/v1/getLogo"
       ); // Replace with your API endpoint
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
